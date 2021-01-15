@@ -15,6 +15,6 @@ setup(
     zip_safe=False,
     install_requires=[
         'waitress',
-        'cone.app'
+        'cone.app>=1.0rc3'
     ]
 )
