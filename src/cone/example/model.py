@@ -15,6 +15,8 @@ class AppNode(BaseNode):
         return iter(['child_1', 'child_2', 'child_3'])
 
     def __getitem__(self, key):
+        if not key in ['child_1', 'child_2', 'child_3']:
+            raise KeyError(key)
         return AppNode(name=key, parent=self)
             
 class AppNodeLeaf(BaseNode):
